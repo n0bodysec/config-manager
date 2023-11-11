@@ -8,9 +8,10 @@ export class ConfigManager<TConfig extends TAnyKey>
 	constructor(defaultData: TConfig)
 	{
 		this.defaultData = defaultData;
+		this.data = defaultData;
 	}
 
-	data: TConfig | undefined;
+	data: TConfig;
 	defaultData: TConfig;
 
 	Initialize = async (path: string) =>
@@ -32,8 +33,6 @@ export class ConfigManager<TConfig extends TAnyKey>
 
 	sanitize = () =>
 	{
-		if (this.data === undefined) throw new Error('Invalid data provided');
-
 		// sanitize the typeof data loaded from config
 		this.#sanitizeType(this.defaultData, this.data);
 

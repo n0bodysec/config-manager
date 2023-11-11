@@ -14,7 +14,7 @@ const defaultData = {
 
 (async () =>
 {
-	const cfgManager = new ConfigManager(defaultData);
+	const cfgManager = new ConfigManager<TConfig>(defaultData);
 	await cfgManager.Initialize('config.json');
 
 	console.log(cfgManager.data);
