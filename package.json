@@ -1,6 +1,6 @@
 {
 	"name": "@n0bodysec/config-manager",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "A dead simple Config Manager",
 	"main": "lib/index.js",
 	"types": "lib/index.d.ts",
@@ -17,12 +17,12 @@
 		"@n0bodysec/eslint-config": "^2.1.1",
 		"@types/lodash": "^4.14.201",
 		"@types/node": "^20.4.1",
-		"@typescript-eslint/eslint-plugin": "^6.9.0",
-		"@typescript-eslint/parser": "^6.9.0",
+		"@typescript-eslint/eslint-plugin": "^6.11.0",
+		"@typescript-eslint/parser": "^6.11.0",
 		"eslint": "^8.44.0",
 		"eslint-plugin-import": "^2.27.5",
 		"rimraf": "^5.0.1",
-		"tsx": "^4.1.1",
+		"tsx": "^4.1.2",
 		"typescript": "^5.1.6"
 	},
 	"dependencies": {

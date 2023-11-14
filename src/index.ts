@@ -13,11 +13,13 @@ export class ConfigManager<TConfig extends TAnyKey>
 
 	data: TConfig;
 	defaultData: TConfig;
+	initialized = false;
 
 	Initialize = async (path: string) =>
 	{
 		await this.load(path);
 		this.sanitize();
+		this.initialized = true;
 	};
 
 	load = async (path: string) =>
@@ -28,7 +30,6 @@ export class ConfigManager<TConfig extends TAnyKey>
 		if (typeof parsedJson !== 'object') throw new Error('Invalid data provided');
 
 		this.data = parsedJson;
-		this.sanitize();
 	};
 
 	sanitize = () =>
