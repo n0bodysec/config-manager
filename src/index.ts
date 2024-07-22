@@ -1,4 +1,4 @@
-import { merge } from 'lodash';
+import merge from 'lodash.merge';
 import { readFile } from 'node:fs/promises';
 
 type TAnyKey = Record<string, unknown>;
@@ -12,7 +12,9 @@ export class ConfigManager<TConfig extends TAnyKey>
 	}
 
 	data: TConfig;
+
 	defaultData: TConfig;
+
 	initialized = false;
 
 	Initialize = async (path: string) =>

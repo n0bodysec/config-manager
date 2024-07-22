@@ -1,8 +1,14 @@
 # node modules
 node_modules/
 
+# pnpm
+.pnpm-store/
+
 # compiled files
 lib/
+
+# TypeScript cache
+*.tsbuildinfo
 
 # npm pack
 *.tgz
